@@ -15,6 +15,7 @@ on:
 jobs:
   run-spam:
     runs-on: ubuntu-latest
+    timeout-minutes: 2 # Tự động dừng job sau số phút được đặt
 
     steps:
       # Bước 1: Checkout code
