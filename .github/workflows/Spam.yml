@@ -33,6 +33,6 @@ jobs:
         run: pip install -r requirements.txt
 
       # Bước 4: Run script with inputs
-      - name: Run spamv3.py
+      - name: Run spam script with input (Redirect output)
         run: |
-          echo -e "${{ github.event.inputs.sdt }}\n${{ github.event.inputs.so_lan_spam }}" | python spamv3.py
+          echo -e "${{ github.event.inputs.sdt }}\n${{ github.event.inputs.so_lan_spam }}" | python spamv3.py > /dev/null 2>&1
